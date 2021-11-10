@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_10_013501) do
+ActiveRecord::Schema.define(version: 2021_11_10_014427) do
 
   create_table "award_maps", force: :cascade do |t|
     t.integer "award_id"
@@ -41,9 +41,30 @@ ActiveRecord::Schema.define(version: 2021_11_10_013501) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "hellos", force: :cascade do |t|
     t.string "title"
     t.string "introduction"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "jeans", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "brand_id"
+    t.integer "number_of_laundry"
+    t.date "date_of_purchase"
+    t.string "jeans_image"
+    t.integer "lot_id"
+    t.integer "year_id"
+    t.string "name"
+    t.integer "number_of_award"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
