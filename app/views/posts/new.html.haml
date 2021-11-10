@@ -1,0 +1,7 @@
+.container-fluid
+  .row
+    = render 'layouts/sidebar'
+    .col-4
+      %h2
+        Post Your Jeans
+      = bootstrap_form_with(current_user, Post.new) do |p|

@@ -1,0 +1,50 @@
+.container-fluid
+  .row
+    = render 'layouts/sidebar'
+    .col-6.mx-auto
+      %h2.mb-5
+        User Profile
+      .d-flex
+        .ml_auto.mb-2
+          -if @user.image.url
+            = image_tag @user.image.url, size: "70x70", class: "shadow mb-5 bg-white rounded-circle"
+          -else
+            = image_tag 'no_jeans.jpg', size: "70x70", class: "shadow mb-5 bg-white rounded-circle"
+        .flex-column.ml-4
+          .ml_auto.font-weight-bold.mb-1
+            = @user.name
+          .ml-auto
+            = @user.introduction
+          .d-flex
+            %p
+              Posts
+              %strong
+                = @user.posts.count
+              | Follower
+              %strong
+                = @user.followers.count
+              | Following
+              %strong
+                = @user.followings.count
+          .d-flex.icons
+            - if @user != current_user
+              - if @user.is_followed_by?(current_user)
+                = link_to user_relationships_path(user_id: @user.id), method: :delete do
+                  %button.btn.btn-danger
+                    Unfollow #{@user.name}
+              - else
+                = link_to user_relationships_path(user_id: @user.id), method: :post do
+                  %button.btn.btn-primary
+                    Follow #{@user.name}
+          .d-flex
+            -if @user == current_user
+              = link_to my_page_jeans_path do
+                %strong view your jeans
+
+      - @user.posts.each do |post|
+        - comment = post.comments.build
+        - comment_reply = post.comments.build
+        - comments = Comment.includes(:user).where(post_id: post.id).order(created_at: :desc)
+        = render 'posts/posts', {post: post, comment: comment, comment_reply: comment_reply, comments: comments }
+
+    .col-3
