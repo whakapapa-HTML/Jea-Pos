@@ -1,0 +1,2 @@
+$("textarea").val("");
+$(".comments_index #comments_and_form_#{@post.id}").html("#{j(render 'comments/index', {comment: @comment, comments: @comments, post: @post, comment_reply: @comment_reply})}");
