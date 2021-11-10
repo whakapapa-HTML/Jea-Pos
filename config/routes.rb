@@ -32,5 +32,4 @@ Rails.application.routes.draw do
   end
   resources :nominee_maps, only: [:create, :destroy]
 
-
 end
