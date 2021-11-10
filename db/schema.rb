@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_09_125810) do
+ActiveRecord::Schema.define(version: 2021_11_10_013501) do
 
   create_table "award_maps", force: :cascade do |t|
     t.integer "award_id"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 2021_11_09_125810) do
   create_table "brands", force: :cascade do |t|
     t.string "name"
     t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.integer "user_id"
+    t.integer "post_id"
+    t.bigint "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
