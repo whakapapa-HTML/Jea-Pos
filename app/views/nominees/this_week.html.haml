@@ -32,6 +32,8 @@
                     - if jeans.user.image.present?
                       = link_to user_path(jeans.user) do
                         = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
+                    -else
+                      = image_tag 'no_jeans.jpg', id: :img_prev, size: "40x40", class: "rounded-circle"
                   %th.pr-3.text-center
                     = jeans.name
                   %td.text-center
