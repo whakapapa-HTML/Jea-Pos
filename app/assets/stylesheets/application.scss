@@ -241,3 +241,6 @@ $size: 22px;
   font-size: 400%
 }
 
+img {
+  object-fit: contain; /* この一行を追加するだけ！ */
+}

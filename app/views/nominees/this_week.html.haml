@@ -28,7 +28,7 @@
               - faded_award.each do |f|
                 - jeans = Jeans.find_by(id: f.jeans_id)
                 %tr.mt-5
-                  %th.pr-3text-center
+                  %th.pr-3.text-center
                     - if jeans.user.image.present?
                       = link_to user_path(jeans.user) do
                         = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
