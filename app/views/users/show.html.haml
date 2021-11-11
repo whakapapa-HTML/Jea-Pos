@@ -26,16 +26,6 @@
               | Following
               %strong
                 = @user.followings.count
-          .d-flex.icons
-            - if @user != current_user
-              - if @user.is_followed_by?(current_user)
-                = link_to user_relationships_path(user_id: @user.id), method: :delete do
-                  %button.btn.btn-danger
-                    Unfollow #{@user.name}
-              - else
-                = link_to user_relationships_path(user_id: @user.id), method: :post do
-                  %button.btn.btn-primary
-                    Follow #{@user.name}
           .d-flex
             -if @user == current_user
               = link_to my_page_jeans_path do
