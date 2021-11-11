@@ -6,8 +6,11 @@
       - @user_jeans.each do |j|
         %ul.list-unstyled
           %li.d-flex
-            = link_to my_jeans_path(j) do
-              = image_tag j.jeans_image.url, size: "200x230", class: "ml-auto shadow-lg mb-5 bg-white rounded"
+            - if j.jeans_image.present?
+              = link_to my_jeans_path(j) do
+                = image_tag j.jeans_image.url, size: "200x230", class: "ml-auto shadow-lg mb-5 bg-white rounded"
+            - else
+              = image_tag 'no_jeans.jpg', id: :img_prev, size: "200x230", class: "shadow-lg mb-5 bg-white rounded"
             .flex-column.p-4
               %strong
                 = j.name

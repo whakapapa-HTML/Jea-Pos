@@ -29,8 +29,9 @@
                 - jeans = Jeans.find_by(id: f.jeans_id)
                 %tr.mt-5
                   %th.pr-3text-center
-                    = link_to user_path(jeans.user) do
-                      = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
+                    - if jeans.user.image.present?
+                      = link_to user_path(jeans.user) do
+                        = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
                   %th.pr-3.text-center
                     = jeans.name
                   %td.text-center
@@ -60,8 +61,9 @@
                 - jeans = Jeans.find_by(id: f.jeans_id)
                 %tr.mt-5
                   %th.pr-3.text-center
-                    = link_to user_path(jeans.user) do
-                      = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
+                    - if jeans.user.image.present?
+                      = link_to user_path(jeans.user) do
+                        = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
                   %th.pr-3.text-center
                     = jeans.name
                   %td.text-center
@@ -90,8 +92,9 @@
                 - jeans = Jeans.find_by(id: f.jeans_id)
                 %tr.mt-5
                   %th.pr-3.text-center
-                    = link_to user_path(jeans.user) do
-                      = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
+                    - if jeans.user.image.present?
+                      = link_to user_path(jeans.user) do
+                        = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
                   %th.pr-3.text-center
                     = jeans.name
                   %td.text-center
@@ -120,8 +123,9 @@
                 - jeans = Jeans.find_by(id: f.jeans_id)
                 %tr.mt-5
                   %th.pr-3.text-center
-                    = link_to user_path(jeans.user) do
-                      = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
+                    - if jeans.user.image.present?
+                      = link_to user_path(jeans.user) do
+                        = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
                   %th.pr-3.text-center
                     = jeans.name
                   %td.text-center
@@ -150,8 +154,9 @@
                 - jeans = Jeans.find_by(id: f.jeans_id)
                 %tr.mt-5
                   %th.pr-3.text-center
-                    = link_to user_path(jeans.user) do
-                      = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
+                    - if jeans.user.image.present?
+                      = link_to user_path(jeans.user) do
+                        = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
                   %th.pr-3.text-center
                     = jeans.name
                   %td.text-center

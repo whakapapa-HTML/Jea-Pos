@@ -7,8 +7,9 @@
       .card-body
         - post_jeans = Jeans.find_by(id: post.jeans_id)
         .d-flex
-          = link_to user_path(post.user) do
-            = image_tag post.user.image.url, size: "50x50", class: "rounded-circle"
+          - if post.user.image.present?
+            = link_to user_path(post.user) do
+              = image_tag post.user.image.url, size: "50x50", class: "rounded-circle"
           .flex-column.ml-3
             %strong
               #{post_jeans.name}
@@ -37,7 +38,7 @@
             .relationship_btn
               = render "relationships/relationship_btn", post: post
           .ml-5
-            = social_share_button_tag( post.body)
+            = social_share_button_tag(post.body)
       .nominate_form.ml-3.mb-3.mr-3.pt-3.border-top{id: "nominate_form_#{post.id}"}
         = bootstrap_form_with url: nominee_maps_path, local: true do |f|
           .mb-2
