@@ -51,7 +51,7 @@
                   Time of Award
             %tbody
               - user_jeans.each do |award_jeans|
-                - award_jeans.award_maps.order(created_at: "desc").each do |award_jean|
+                - award_jeans.award_maps.order(created_at: "desc").each do |award_map|
                   - if award_jean.award_id == "Best Faded"
                     %tr
                       %td{scope: "row"}
