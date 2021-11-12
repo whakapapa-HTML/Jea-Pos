@@ -52,7 +52,7 @@
             %tbody
               - user_jeans.each do |award_jeans|
                 - award_jeans.award_maps.order(created_at: "desc").each do |award_map|
-                  - if award_jean.award_id == "Best Faded"
+                  - if award_map.award_id == "Best Faded"
                     %tr
                       %td{scope: "row"}
                         = image_tag award_jeans.jeans_image.url, size: "40x40", class: "rounded-circle"
