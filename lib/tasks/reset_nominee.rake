@@ -18,7 +18,7 @@ namespace :nominee_reset do
 
   desc "Fashinable_Awardインスタンスを作成する"
   task :create_fashinable => :environment do
-
+  binding.pry
     if NomineeMap.where(nominee_id: 2).present?
       nominees = NomineeMap.group(:nominee_id)  # ノミネートごとに投票を分ける
       nominee = nominees.group(:jeans_id).order('count(nominee_id) desc') # 投票が多かった順にジーンズを並べる
