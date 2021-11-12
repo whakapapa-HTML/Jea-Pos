@@ -4,7 +4,7 @@ namespace :nominee_reset do
   task :create_faded => :environment do
 
     if NomineeMap.where(nominee_id: 1).present?
-      nominees = NomineeMap.group(:nominee_id)  # ノミネートごとに投票を分ける
+      nominees = NomineeMap.group(:id)  # ノミネートごとに投票を分ける
       nominee = nominees.group(:jeans_id).order('count(nominee_id) desc') # 投票が多かった順にジーンズを並べる
       faded_award =  nominee.where(nominee_id: 1).first   # 一番最初のインスタンス＝ 一番得票数がおおい
       jeans = Jeans.find_by(id: faded_award.jeans_id)
@@ -20,7 +20,7 @@ namespace :nominee_reset do
   task :create_fashinable => :environment do
   binding.pry
     if NomineeMap.where(nominee_id: 2).present?
-      nominees = NomineeMap.group(:nominee_id)  # ノミネートごとに投票を分ける
+      nominees = NomineeMap.group(:id)  # ノミネートごとに投票を分ける
       nominee = nominees.group(:jeans_id).order('count(nominee_id) desc') # 投票が多かった順にジーンズを並べる
       faded_award =  nominee.where(nominee_id: 2).first   # 一番最初のインスタンス＝ 一番得票数がおおい
       jeans = Jeans.find_by(id: faded_award.jeans_id)
@@ -37,7 +37,7 @@ namespace :nominee_reset do
   task :create_whisker => :environment do
 
     if NomineeMap.where(nominee_id: 3).present?
-      nominees = NomineeMap.group(:nominee_id)  # ノミネートごとに投票を分ける
+      nominees = NomineeMap.group(:id)  # ノミネートごとに投票を分ける
       nominee = nominees.group(:jeans_id).order('count(nominee_id) desc') # 投票が多かった順にジーンズを並べる
       faded_award =  nominee.where(nominee_id: 3).first   # 一番最初のインスタンス＝ 一番得票数がおおい
       jeans = Jeans.find_by(id: faded_award.jeans_id)
@@ -54,7 +54,7 @@ namespace :nominee_reset do
   task :create_shevron => :environment do
 
     if NomineeMap.where(nominee_id: 4).present?
-      nominees = NomineeMap.group(:nominee_id)  # ノミネートごとに投票を分ける
+      nominees = NomineeMap.group(:id)  # ノミネートごとに投票を分ける
       nominee = nominees.group(:jeans_id).order('count(nominee_id) desc') # 投票が多かった順にジーンズを並べる
       faded_award =  nominee.where(nominee_id: 4).first   # 一番最初のインスタンス ＝ 一番得票数がおおい
       jeans = Jeans.find_by(id: faded_award.jeans_id)
@@ -71,7 +71,7 @@ namespace :nominee_reset do
   desc "501_Awardインスタンスを作成する"
   task :create_501 => :environment do
     if NomineeMap.where(nominee_id: 5).present?
-      nominees = NomineeMap.group(:nominee_id)  # ノミネートごとに投票を分ける
+      nominees = NomineeMap.group(:id)  # ノミネートごとに投票を分ける
       nominee = nominees.group(:jeans_id).order('count(nominee_id) desc') # 投票が多かった順にジーンズを並べる
       faded_award =  nominee.where(nominee_id: 5).first   # 一番最初のインスタンス＝ 一番得票数がおおい
       jeans = Jeans.find_by(id: faded_award.jeans_id)
