@@ -11,6 +11,8 @@
       %ul.navbar-nav.ml-auto
         - if user_signed_in?
           %li.nav-item
+            = link_to "ABOUT", about_path, class: 'text-white nav-link'
+          %li.nav-item
             = link_to "LOOK NOMINEES", this_week_path, class: 'text-white nav-link'
           %li.nav-item
             = link_to 'MY PAGE', my_page_path, class: 'text-white nav-link'
@@ -21,6 +23,8 @@
           %li.nav-item
             = link_to "LOG OUT", destroy_user_session_path, method: :delete, class: 'text-white nav-link'
         - else
+          %li.nav-item
+            = link_to "ABOUT", about_path, class: 'text-white nav-link'
           %li.nav-item
             = link_to "SINE UP", new_user_registration_path, class: 'text-white nav-link'
           %li.nav-item

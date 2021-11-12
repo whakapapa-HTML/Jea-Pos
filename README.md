@@ -1,24 +1,38 @@
-# README
+# Jea-Pos
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+自分のデニムを投稿・好きなデニムに投票できるジーンズ愛に溢れたサイト。
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+### ■　サイトテーマ
+「***raise your jeans, live with jeans***」
 
-* Configuration
 
-* Database creation
+ ### ■　テーマを選んだ理由
+デニムの面白さを伝えたいという思いで、このテーマを選びました。リジッドからはき始めたデニムは年数をかけると、自分の癖や生活がシワや色落ちとなって反映されていきます。このごまかしようのなさが、私がデニムを好きになった理由のひとつです。投稿では自分のデニムを育てていく経過を記録できる・閲覧できるということを目的にしています。購入日や洗濯回数などを登録し、デニムがどのように育てられて行ったのかを記録できるところが、他の投稿サイトとは異なる点です。今回このような投稿だけでなく、他のデニムに投票できるという機能をつけました。投票機能をつけることで、他ユーザーからの評価により、投稿写真も洗練され、デニムを履く楽しみが増えると思いました。毎日違ったカテゴリーで投票が決まり、サイトの使用率を上げる工夫も取り入れています。
+このサイトを使って、より多くの方達がデニムを履き、デニム文化ができたら幸せだと思います。
 
-* Database initialization
 
-* How to run the test suite
+### ■　ターゲットユーザ
+* デニム好きな方・興味のある方
+* 自分のデニムを投稿したい方
+* 他のユーザーのデニムを見てみたいと思っている方
+* 20~50代の男性
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+### ■　主な利用シーン
+* 自分のデニムを共有したい時
+* 他ユーザーのデニムを見たい時
 
-* ...
+## 　設計書
+
+## ■　チャレンジ要素一覧
+<https://docs.google.com/spreadsheets/d/1Zb9D89e5YpM3IjRIyFZ0VmMF03UJE9jBmgXU0vrkoFA/edit#gid=0>
+
+## ■　開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,PostgreSQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery, Slick
+- IDE：Cloud9
