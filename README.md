@@ -31,3 +31,19 @@
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery, Slick
 - IDE：Cloud9
+
+
+## ■ 特徴的な機能
+### 1, 投票機能
+それぞれのカテゴリーへ１ユーザーが１回のみ、投票することができます。
+投票数に応じて、その日の受賞者(Award)が決まります。
+![ik1M1ZZonHvPmgfeHBL31636797154-1636797276](https://user-images.githubusercontent.com/80505290/141614909-c7b79f27-a1bd-4e2a-b6fa-82ca32321355.gif)
+
+投票するとノミネートに記録される。
+<img width="1026" alt="スクリーンショット 2021-11-13 19 55 45" src="https://user-images.githubusercontent.com/80505290/141622144-b30b718b-d2cf-44cf-957f-3652b55332ff.png">
+
+投票が一番多かったデニムにAwardが授与されます。(Heroku Scheduleで自動化)
+<img width="1026" alt="スクリーンショット 2021-11-13 19 56 20" src="https://user-images.githubusercontent.com/80505290/141622272-62920aad-224f-437f-93e9-e260e95425de.png">
+### 2, ストレスフリーなコメント非同期機能
+コメント投稿時、コメントフォーム表示・非表示、返信コメント表示・非表示は全てJavaScriptで実装しています。
+![tPnQBFV3hi3XT4yFdSUN1636798039-1636798145](https://user-images.githubusercontent.com/80505290/141614927-32a6b098-4b88-4415-b8e0-bac4f1146164.gif)
