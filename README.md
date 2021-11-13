@@ -1,5 +1,5 @@
 # Jea-Pos
-
+<img width="1440" alt="スクリーンショット 2021-11-13 20 44 26" src="https://user-images.githubusercontent.com/80505290/141642619-f0e91ad1-af64-426c-8d75-287e8e0936aa.png">
 ## サイト概要
 自分のデニムを投稿・好きなデニムに投票できるジーンズ愛に溢れたサイト。
 
@@ -21,6 +21,7 @@
 * 他ユーザーのデニムを見たい時
 
 ## 　設計書
+<img width="494" alt="スクリーンショット 2021-11-13 20 47 53" src="https://user-images.githubusercontent.com/80505290/141642622-b666c128-1317-44ec-8a88-e04f019d92a0.png">
 
 ## ■　チャレンジ要素一覧
 <https://docs.google.com/spreadsheets/d/1Zb9D89e5YpM3IjRIyFZ0VmMF03UJE9jBmgXU0vrkoFA/edit#gid=0>
