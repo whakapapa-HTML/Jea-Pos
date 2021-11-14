@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     if user_signed_in?
       @posts = Post.all
       from  = Time.current
-      to    = (from - 6.day).at_end_of_day
+      to    = (from - 1.day).at_end_of_day
       @winners = AwardMap.where(created_at: to...from)
     else
       @posts = Post.all.shuffle

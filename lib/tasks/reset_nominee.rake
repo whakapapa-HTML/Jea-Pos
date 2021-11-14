@@ -2,7 +2,6 @@ namespace :nominee_reset do
 
   desc "Faded_Awardインスタンスを作成する"
   task :create_faded => :environment do
-
     if NomineeMap.where(nominee_id: 1).present?
       nominees = NomineeMap.group(:id)  # ノミネートごとに投票を分ける
       nominee = nominees.group(:jeans_id).order('count(nominee_id) desc') # 投票が多かった順にジーンズを並べる
@@ -14,6 +13,8 @@ namespace :nominee_reset do
       nominee_faded.update(nominee_id: nil, jeans_id: nil, user_id: nil)
     end
   end
+  
+  
 
 
   desc "Fashinable_Awardインスタンスを作成する"
@@ -82,4 +83,6 @@ namespace :nominee_reset do
       nominee_faded.update(nominee_id: nil, jeans_id: nil, user_id: nil)
     end
   end
+  
+  
 end
