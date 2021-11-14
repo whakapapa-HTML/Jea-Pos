@@ -1,7 +1,7 @@
 class NomineesController < ApplicationController
 
   def this_week
-    nominees = NomineeMap.group("nominee_maps.nominee_id" )
+    nominees = NomineeMap.unscoped.group(:nominee_id)
     @jeans = nominees.group(:jeans_id).order('count(nominee_id) desc').limit(5)
   end
 
