@@ -46,8 +46,11 @@
           %h4
             Best Fashionable
           %p
-            (reset all nominees on every Wednesday at 12:00 pm)
+            (reset all nominees on every Monday at 12:00 pm)
           - if @jeans.where(nominee_id: 2).present?
+            - faded_award =  @jeans.where(nominee_id: 2)
+            // - most_obtained =  faded_award.first
+            // - most_obtained.create_award(most_obtained.jeans_id, most_obtained.nominee_id)
             %table.table.table-dark
               %thead
                 %tr
@@ -57,7 +60,7 @@
                   %th.text-center{scope:"col"}
                     number of nominees obtained
               %tbody
-              // faded_award = NomineeMapインスタンスが入っている
+              // faded_award = ノミニーインスタンスが入っている
               - faded_award =  @jeans.where(nominee_id: 2)
               - faded_award.each do |f|
                 - jeans = Jeans.find_by(id: f.jeans_id)
@@ -66,6 +69,8 @@
                     - if jeans.user.image.present?
                       = link_to user_path(jeans.user) do
                         = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
+                    -else
+                      = image_tag 'no_jeans.jpg', id: :img_prev, size: "40x40", class: "rounded-circle"
                   %th.pr-3.text-center
                     = jeans.name
                   %td.text-center
@@ -97,6 +102,8 @@
                     - if jeans.user.image.present?
                       = link_to user_path(jeans.user) do
                         = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
+                    -else
+                      = image_tag 'no_jeans.jpg', id: :img_prev, size: "40x40", class: "rounded-circle"
                   %th.pr-3.text-center
                     = jeans.name
                   %td.text-center
@@ -128,6 +135,8 @@
                     - if jeans.user.image.present?
                       = link_to user_path(jeans.user) do
                         = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
+                    -else
+                      = image_tag 'no_jeans.jpg', id: :img_prev, size: "40x40", class: "rounded-circle"
                   %th.pr-3.text-center
                     = jeans.name
                   %td.text-center
@@ -159,6 +168,8 @@
                     - if jeans.user.image.present?
                       = link_to user_path(jeans.user) do
                         = image_tag jeans.user.image.url, size: "40x40", class: "rounded-circle"
+                    -else
+                      = image_tag 'no_jeans.jpg', id: :img_prev, size: "40x40", class: "rounded-circle"
                   %th.pr-3.text-center
                     = jeans.name
                   %td.text-center
