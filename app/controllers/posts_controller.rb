@@ -11,7 +11,7 @@ class PostsController < ApplicationController
       @posts = Post.all.shuffle
       # 一週間分のレコードを取得
       from  = Time.current
-      to    = (from - 6.day).at_end_of_day
+      to    = (from - 1.day)
       @winners = AwardMap.where(created_at: to...from)  # ...でfrom 以上 to 未満
     end
   end
