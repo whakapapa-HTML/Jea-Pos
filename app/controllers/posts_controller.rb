@@ -2,10 +2,8 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:others]
 
   def others
-      @posts = Post.all.shuffle
-      from  = Time.current
-      to    = (from - 1.day)
-      @winners = AwardMap.where(created_at: to...from).limit(5)
+    @posts = Post.all.shuffle
+    @winners = AwardMap.order(created_at: :desc).limit(5)
   end
 
   def index
