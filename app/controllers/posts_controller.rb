@@ -5,7 +5,7 @@ class PostsController < ApplicationController
       @posts = Post.all.shuffle
       from  = Time.current
       to    = (from - 1.day)
-      @winners = AwardMap.where(created_at: to...from)
+      @winners = AwardMap.where(created_at: to...from).limit(5)
   end
 
   def index
