@@ -50,16 +50,15 @@
                 %th{scope: "col"}
                   Time of Award
             %tbody
-              - user_jeans.each do |award_jeans|
-                - award_jeans.award_maps.order(created_at: "desc").each do |award_map|
-                  - if award_map.award_id == "Best Faded"
-                    %tr
-                      %td{scope: "row"}
-                        = image_tag award_jeans.jeans_image.url, size: "40x40", class: "rounded-circle"
-                      %td
-                        = award_jeans.name
-                      %td
-                        = award_jeans.created_at.strftime("%Y-%m-%d-%a")
+              - user_jeans.award_maps.order(created_at: "desc").each do |award_map|
+                - if award_map.award_id == "Best Faded"
+                  %tr
+                    %td{scope: "row"}
+                      = image_tag award_jeans.jeans_image.url, size: "40x40", class: "rounded-circle"
+                    %td
+                      = award_jeans.name
+                    %td
+                      = award_jeans.created_at.strftime("%Y-%m-%d-%a")
 
         .d-flex.p-2
           %i.fas.fa-award.award_icons

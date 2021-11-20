@@ -78,7 +78,7 @@ namespace :nominee_reset do
       end
     end
 
-  desc "501_Awardインスタンスを作成する"
+  desc "NomineeMapインスタンスを作成する"
     task :seed_nominee_maps => :environment do
         Faker::Number.between(from: 40, to: 50).times do |n|
         NomineeMap.create!(
