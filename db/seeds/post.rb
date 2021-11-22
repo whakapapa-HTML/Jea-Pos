@@ -40,7 +40,7 @@
   3.times do |n|
     Post.create!(
       body: Faker::Lorem.sentence,
-      image: open("#{Rails.root}/db/fixtures/55893-warner_home_video4.jpeg"),
+      image: open("#{Rails.root}/db/fixtures/girl-g735567eb5_640.jpg"),
       jeans_id: "#{n + 3}",
       user_id: "#{n + 3}"
     )
