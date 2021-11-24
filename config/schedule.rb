@@ -29,26 +29,26 @@ set :environment, rails_env
 # cronのログの吐き出し場所。ここでエラー内容を確認する
 set :output, "#{Rails.root}/log/cron.log"
 
-every 1.minutes do
+every 6.hours do
   rake "nominee_reset:create_faded"
 end
 
-every 1.minutes do
+every 6.hours do
   rake "nominee_reset:create_501"
 end
 
-every 1.minutes  do
+every 6.hours  do
   rake "nominee_reset:create_fashinable"
 end
 
-every 1.minutes do
+every 6.hours do
   rake "nominee_reset:create_shevron"
 end
 
-every 1.minutes do
+every 6.hours do
   rake "nominee_reset:create_whisker"
 end
 
-every 1.minutes do
+every 6.hours do
   rake "nominee_reset:seed_nominee_maps"
 end
