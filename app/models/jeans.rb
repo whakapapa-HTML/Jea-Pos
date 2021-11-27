@@ -1,5 +1,14 @@
 class Jeans < ApplicationRecord
 
+  with_options presence: true do
+    validates :name
+    validates :jeans_image
+    validates :brand_id
+    validates :user_id
+    validates :lot_id
+    validates :date_of_purchase
+  end
+
   belongs_to :lot, optional: true
   belongs_to :brand, optional: true
   belongs_to :year, optional: true

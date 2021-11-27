@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get 'my_page' => 'users#my_page'
   get 'my_page/edit' => 'users#edit'
   get 'my_page/jeans' => 'jeans#index'
+  get 'my_page/new_jeans' => 'jeans#new'
   get 'my_page/jeans/:id' => 'jeans#show', as: 'my_jeans'
   get 'my_page/timeline' => 'posts#timeline', as: 'timeline'
   get 'this_week', to: 'nominees#this_week'
