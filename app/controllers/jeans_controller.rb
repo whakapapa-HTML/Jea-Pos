@@ -3,17 +3,18 @@ class JeansController < ApplicationController
   def new
     @jeans = Jeans.new
   end
+
   def index
     @user_jeans = current_user.jeans.order(id: :desc)
     @today = Date.today
   end
 
   def create
-    jean = Jeans.new(jeans_params)
-    if jean.save
+    @jeans = Jeans.new(jeans_params)
+    if @jeans.save
       redirect_to my_page_jeans_path
     else
-      render :index
+      render :new
     end
   end
 

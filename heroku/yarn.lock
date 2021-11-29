@@ -296,10 +296,10 @@
     lodash "^4.17.11"
     lodash.flatten "^4.4.0"
 
-"@heroku-cli/plugin-pg-v5@^7.59.1":
-  version "7.59.1"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-pg-v5/-/plugin-pg-v5-7.59.1.tgz#82dba4a8dc5daecfd0b98f4e89526f5144aebd45"
-  integrity sha512-0qg8wb2V1OIMF3yXPfhexzepRlP2xaDYzBo7r0Gk7mHIAfiIPXnbBsP1d2Xj773wgz9iukf5SDh35jnOWvfnSQ==
+"@heroku-cli/plugin-pg-v5@^7.59.2":
+  version "7.59.2"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-pg-v5/-/plugin-pg-v5-7.59.2.tgz#19ab7547085685235d7fd903dc7bfd468e155ea9"
+  integrity sha512-y38uzKRU1mwZMBdjL6RgiXo19J50EU77fwkd186MgTnocczyGcOxSybnGFoAJwIfJE+MUtBlb9DJ5XkrbvYKXA==
   dependencies:
     "@heroku-cli/plugin-addons" "^1.2.29"
     bytes "^3.1.0"
