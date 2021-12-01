@@ -1,7 +1,7 @@
 class Jeans < ApplicationRecord
 
   with_options presence: true do
-    validates :name
+    validates :name, length: {minimum: 3, maximum: 50}
     validates :jeans_image
     validates :brand_id
     validates :user_id

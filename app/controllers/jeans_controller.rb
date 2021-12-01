@@ -25,8 +25,11 @@ class JeansController < ApplicationController
 
   def update
     @jeans = Jeans.find(params[:id])
-    @jeans.update(jeans_params)
-    redirect_to request.referer
+    if @jeans.update(jeans_params)
+      redirect_to my_page_jeans_path
+    else
+      render :show
+    end
   end
 
   private

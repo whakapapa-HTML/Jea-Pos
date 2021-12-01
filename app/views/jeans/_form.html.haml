@@ -1,10 +1,9 @@
-
 = bootstrap_form_with(model:[current_user, jeans], local: true) do |f|
   .form_group.row.justify-content-center
     -if jeans.jeans_image.url
-      = image_tag jeans.jeans_image.url, id: :img_prev, size: "200x230", class: "shadow-lg p-3 mb-5 bg-white rounded"
+      = image_tag jeans.jeans_image.url, id: :img_prev, size: "400x330", class: "shadow-lg p-3 mb-5 bg-white rounded"
     -else
-      = image_tag 'no_jeans.jpg', id: :img_prev, size: "200x230", class: "shadow-lg p-3 mb-5 bg-white rounded m-auto"
+      = image_tag 'no_jeans.jpg', id: :img_prev, size: "400x330", class: "shadow-lg p-3 mb-5 bg-white rounded m-auto"
   .form_group
     = f.text_field :name, :placeholder => "Give your jeans specify name"
   .file_form_group
