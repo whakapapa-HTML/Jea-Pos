@@ -1,17 +1,18 @@
 .container-fluid
   .row
-    = render 'layouts/sidebar'
-    .col-9
-      .d-flex
-        %i.far.fa-hand-point-left.pt-5.pl-5.text-success
-        %h1.p-5
-          Click Your Favorite Jeans!!
-      .flex-wrap.slick_logged_in
+    .col-12
+      .d-flex.flex-wrap
         - @posts.each do |post|
-          = link_to post_path(post), class: "text-decoration-none" do
-            = image_tag post.image.url, class: "other-jeans-image mt-3 mb-3"
-    .col-3
-    .col-9
+          .col-3
+            .card.border-0.shadow.m-2.bg-light
+              = link_to post_path(post), class: "text-decoration-none m-auto" do
+                = image_tag post.image.url, size: "200x300", class: "object-fit"
+            .d-flex
+              = image_tag post.user.image.url, size: "30x30", class: "rounded-circle object-fit"
+              %strong.ml-3
+                = post.user.name
+
+    .col-12
       .d-flex
         %i.fas.fa-trophy.pt-5.pl-5.text-warning.fa-trophy_icon
         %h1.p-5
