@@ -6,16 +6,21 @@
           .col-3
             .card.border-0.shadow.m-2.bg-light
               = link_to post_path(post), class: "text-decoration-none m-auto" do
-                = image_tag post.image.url, size: "250x250", class: "object-fit"
-            .d-flex
-              = image_tag post.user.image.url, size: "30x30", class: "rounded-circle object-fit"
+                = image_tag post.image.url, size: "200x200", class: "object-fit"
+            .d-flex.mb-3.ml-3
+              = image_tag post.user.image.url, size: "20x20", class: "rounded-circle object-fit"
               %strong.ml-3
                 = post.user.name
-              %small.ml-3
-              .div{id: "post_#{post.id}"}
-                .favorite_btn
-                  = render "favorites/favorite_btn", post: post
-                = post.favorites.count
+              - if user_signed_in?
+                %small.mt-1.mr-4.ml-auto
+                  .div{id: "post_#{post.id}"}
+                    .favorite_btn
+                      = render "favorites/favorite_btn", post: post
+              - else
+                %small.mt-1.mr-4.ml-auto
+                  = link_to new_user_session_path do
+                    %i.favorites_color_session.far.fa-heart
+                  = post.favorites.count
 
     .col-12
       .d-flex

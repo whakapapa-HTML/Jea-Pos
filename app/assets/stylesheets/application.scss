@@ -153,9 +153,13 @@ body {
   color: #ff5192;
 }
 
+.favorites_color_session {
+  color: #ff5192;
+}
+
 .favorites_color::before {
   position: absolute;
-  top: 0;
+  top: 2px;
 }
 
 .following_color::before {
