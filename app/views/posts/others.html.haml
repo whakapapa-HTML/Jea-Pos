@@ -4,7 +4,7 @@
       .d-flex.flex-wrap
         - @posts.each do |post|
           .col-3
-            .card.border-0.shadow.m-2.bg-light
+            .post-image.card.border-0.shadow.m-2.bg-light
               = link_to post_path(post), class: "text-decoration-none m-auto" do
                 = image_tag post.image.url, size: "200x200", class: "object-fit"
             .d-flex.mb-3.ml-3
