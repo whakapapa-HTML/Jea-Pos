@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:others]
 
   def others
-    @posts = Post.all.shuffle
+    @posts = Post.order(created_at: :desc).limit(16)
     @winners = AwardMap.order(created_at: :desc).limit(5)
   end
 
