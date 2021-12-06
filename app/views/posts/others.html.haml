@@ -12,10 +12,14 @@
               %strong.ml-3
                 = post.user.name
               - if user_signed_in?
-                %small.mt-1.mr-4.ml-auto
-                  .div{id: "post_#{post.id}"}
-                    .favorite_btn
+                %small.mr-4.ml-auto
+                  .div{id: "post_#{post.id}", class: "d-flex"}
+                    .favorite_btn.mr-2
                       = render "favorites/favorite_btn", post: post
+                    .comment_btn
+                      = link_to post_path(post.id), class: "text-secondary" do
+                        %i.far.fa-comment-dots
+                      = post.comments.count
               - else
                 %small.mt-1.mr-4.ml-auto
                   = link_to new_user_session_path do

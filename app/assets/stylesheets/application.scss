@@ -32,8 +32,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-small {
+h5 {
   font-family: "Ultra", serif;
 }
 
@@ -154,10 +153,6 @@ body {
   top: 0;
 }
 
-.favorites_color {
-  color: #ff5192;
-}
-
 .favorites_color_session {
   color: #ff5192;
 }
@@ -165,6 +160,11 @@ body {
 .favorites_color::before {
   position: absolute;
   top: 2px;
+  text-decoration: none;
+}
+
+.favorites_color:hover {
+  color: #ff5192;
 }
 
 .following_color::before {
