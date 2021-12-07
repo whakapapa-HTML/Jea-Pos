@@ -11,6 +11,7 @@
               = image_tag post.user.image.url, size: "20x20", class: "rounded-circle object-fit"
               %strong.ml-3
                 = post.user.name
+                
               - if user_signed_in?
                 %small.mr-4.ml-auto
                   .div{id: "post_#{post.id}", class: "d-flex"}
