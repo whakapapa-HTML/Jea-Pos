@@ -11,8 +11,6 @@
               = image_tag post.user.image.url, size: "20x20", class: "rounded-circle object-fit"
               %strong.ml-3
                 = post.user.name
-
-                
               - if user_signed_in?
                 %small.mr-4.ml-auto
                   .div{id: "post_#{post.id}", class: "d-flex"}
@@ -24,9 +22,15 @@
                       = post.comments.count
               - else
                 %small.mt-1.mr-4.ml-auto
-                  = link_to new_user_session_path do
-                    %i.favorites_color_session.far.fa-heart
-                  = post.favorites.count
+                  .div{id: "post_#{post.id}", class: "d-flex"}
+                    .favorite_btn.mr-2
+                      = link_to new_user_session_path, class: "text-secondary" do
+                        %i.favorites_btn.far.fa-heart
+                      = post.favorites.count
+                    .comment_btn
+                      = link_to new_user_session_path, class: "text-secondary" do
+                        %i.far.fa-comment-dots
+                      = post.comments.count
 
     .col-12
       .d-flex
