@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
       store_location_for(:user, request.url)
     end
 
+    
     def devise_or_home_controller?
       devise_controller? || others_path
     end
