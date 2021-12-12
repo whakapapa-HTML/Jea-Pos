@@ -81,7 +81,7 @@ body {
 }
 
 .icons {
-  font-size: 130%;
+  font-size: 100%;
 }
 
 .award_icons {
@@ -144,7 +144,7 @@ body {
 
 .trophy_icon::before {
   position: absolute;
-  top: 0;
+  top: 2px;
   animation: flash 2s linear infinite;
 }
 
@@ -172,7 +172,7 @@ body {
 }
 .following_color::before {
   position: absolute;
-  top: 0;
+  top: 2px;
 }
 
 .edit_icon::before {
