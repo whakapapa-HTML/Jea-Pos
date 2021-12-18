@@ -26,10 +26,10 @@
                 = tag.tag_name
         .d-flex.icons
           -if post_jeans.is_nominated_by?(post_jeans, current_user)
-            .position-relative.mr-3
+            .position-relative.mr-3.mt-1
               %i.fas.fa-check-circle.mr-4.trophy_complete{onClick: "click_trophy_complete()"}
           -else
-            .position-relative.mr-3
+            .position-relative.mr-3.mt-1
               %i.fas.fa-trophy.text-warning.mr-4.trophy_icon{onClick: "click_trophy_icon(this)", id: "#{post.id}" }
           .div{id: "post_#{post.id}"}
             .favorite_btn
